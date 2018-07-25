@@ -1,0 +1,22 @@
+{
+  "name": "jest",
+  "description": "オールインワンなJestだけを依存に追加すれば、すぐにテストコードを書き始められるようになる。",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^23.4.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macotok/Jest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macotok/Jest/issues"
+  },
+  "homepage": "https://github.com/macotok/Jest#readme"
+}
