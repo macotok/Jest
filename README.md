@@ -14,6 +14,69 @@ npm test -- --watch
 jest --watch
 ```
 
+## グローバル変数として定義している関数
+
+- test()
+- describe()
+- beforeAll()
+- afterAll()
+- beforeEach()
+- afterEach()
+
+### test(name, fn)
+
+テストケースの最小単位。必ず利用することになる関数
+
+```
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1,2).toBe(3))
+});
+```
+
+ラベルだけを指定することもできる
+テストケースの実行がスキップされる。またTODOを残す意味で使う
+
+```
+test('adds 0 + 0 to equal 0');
+```
+
+### describe(name, fn)
+
+test()によって書かれたテストケースをグルーピング
+
+```
+describe('a number given', () => {
+  test('adds 1 + 2 to equal 3');
+  test('adds 0 + 0 to equal 0');
+});
+```
+
+適切な単位でスコープを形成。コードの見通しをよくする
+describe()はいくつもネストさせることができる
+
+### .skip / .only
+
+test()、describe()に付与できるプロパティ
+
+- .skip そのブロック、そのテストの実行をスキップ
+- .only そのブロック、そのテストのみを実行
+
+テストケースが多く書かれていて確認に時間がかかるときなどに使用
+
+```
+describe('a number given', () => {
+  // このテストケースのみ実行
+  test.only('adds 1 + 2 to equal 3', () => {
+    ...
+  });
+
+  // ここはスキップされる
+  test('adds 0 + 0 to equal 0', () => {
+    ...
+  })
+});
+```
+
 ## 用語
 
 - testPathIgnorePatterns テスト除外指定「node_modules」など
