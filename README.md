@@ -25,9 +25,7 @@ jest --watch
 
 ### test(name, fn)
 
-テストケースの最小単位。
-
-必ず利用することになる関数
+テストケースの最小単位。必ず利用することになる関数
 
 ```
 test('adds 1 + 2 to equal 3', () => {
@@ -36,9 +34,10 @@ test('adds 1 + 2 to equal 3', () => {
 ```
 
 ラベルだけを指定することもできる
-テストケースの実行がスキップされる。
 
-またTODOを残す意味で使う
+テストケースの実行がスキップされる
+
+TODOを残す意味で使う
 
 ```
 test('adds 0 + 0 to equal 0');
@@ -89,7 +88,7 @@ describe('a number given', () => {
 
 #### beforeEach()/afterEach()
 
-itまたはtest毎に必ず実施した前/後処理がある場合に使う
+itまたはtest毎に必ず実施したい前/後処理がある場合に使用
 
 ```
 beforeAll(() => console.log('top-beforeAll'));
